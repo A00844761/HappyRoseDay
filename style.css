@@ -1,0 +1,144 @@
+/* Fuentes elegantes */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff0f3;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden; /* Evita scrolls */
+}
+
+.contenedor-principal {
+  width: 350px;
+  height: 500px;
+  perspective: 1500px;
+}
+
+.tarjeta {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.tarjeta.abierta {
+  transform: rotateY(180deg);
+}
+
+.cara {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* ESTILO FRENTE CON IMAGEN */
+.frente {
+  background: white;
+  z-index: 2;
+  border: 12px solid white;
+  outline: 2px double #b3002d;
+  outline-offset: -10px;
+}
+
+/* NUEVO: Contenedor para la imagen fija */
+.contenedor-imagen {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black; /* Fondo negro como la imagen original */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.imagen-ramo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajusta la imagen sin deformar */
+}
+
+.esquina {
+  position: absolute;
+  font-size: 22px;
+  z-index: 20;
+  filter: drop-shadow(0 0 5px rgba(179, 0, 45, 0.3));
+}
+
+.topo-esq { top: 5px; left: 5px; }
+.topo-dir { top: 5px; right: 5px; }
+.base-esq { bottom: 5px; left: 5px; }
+.base-dir { bottom: 5px; right: 5px; }
+
+.info {
+  text-align: center;
+  padding: 10px;
+}
+
+.info h1 {
+  margin: 0;
+  color: #b3002d;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+}
+
+.info p {
+  font-size: 0.8rem;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reverso {
+  background: #b3002d;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.contenido h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.linea {
+  width: 80px;
+  height: 2px;
+  background: white;
+  margin: 20px 0;
+}
+
+.firma {
+  margin-top: 20px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  opacity: 0.9;
+}

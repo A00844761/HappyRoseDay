@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Scarlette 🌹</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- NO necesitamos Three.js aquí -->
+</head>
+<body>
+
+<div class="contenedor-principal">
+  <div class="tarjeta" id="tarjeta">
+    
+    <!-- FRENTE: LA IMAGEN DEL RAMO -->
+    <div class="cara frente">
+      <!-- Decoración de esquinas (opcional, puedes quitarlas si quieres) -->
+      <span class="esquina topo-esq">🌹</span>
+      <span class="esquina topo-dir">🌹</span>
+      <span class="esquina base-esq">🌹</span>
+      <span class="esquina base-dir">🌹</span>
+
+      <!-- NUEVO: Contenedor para la imagen, reemplazando el canvas 3D -->
+      <div class="contenedor-imagen">
+        <img src="realistiv_roses.png" alt="Ramo de Rosas" class="imagen-ramo">
+      </div>
+      
+      <div class="info">
+        <h1>Para: Scarlette</h1>
+        <p>Haz clic para abrir</p>
+      </div>
+    </div>
+    
+    <!-- REVERSO: EL MENSAJE (Sin cambios) -->
+    <div class="cara reverso">
+      <div class="contenido">
+        <h2>¡Feliz Día de la Rosa!</h2>
+        <div class="linea"></div>
+        <p>Espero que te guste. Lo hice para ti, sabiendo que querías una rosa ;)</p>
+        <p class="firma">De parte de... Joshua</p>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+<!-- Lógica de clic muy sencilla -->
+<script>
+  const tarjetaElemento = document.getElementById('tarjeta');
+  if (tarjetaElemento) {
+    tarjetaElemento.addEventListener('click', () => {
+      tarjetaElemento.classList.toggle('abierta');
+    });
+  }
+</script>
+
+</body>
+</html>
